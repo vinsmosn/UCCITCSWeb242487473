@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffafc;
+  color: #4b3b40;
+  line-height: 1.7;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Floral banner */
+.hero-banner {
+  background-image: url("images/floral-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  color: #4b3b40;
+  backdrop-filter: brightness(0.9);
+}
+
+#title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #b54c63;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #704f52;
+  margin-top: 0.5rem;
+}
+
+/* Image section */
+#img-div {
+  margin: 2rem auto;
+  background-color: #fff0f5;
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+#img-caption {
+  font-size: 1rem;
+  color: #775658;
+  margin-top: 0.8rem;
+}
+
+/* Tribute info */
+#tribute-info {
+  max-width: 750px;
+  margin: 2.5rem auto;
+  text-align: left;
+  background-color: #fff9fa;
+  padding: 2rem;
+  border-left: 5px solid #f7c8d0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#tribute-info h2 {
+  color: #b54c63;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#tribute-info p {
+  margin-bottom: 1rem;
+  color: #594b4d;
+}
+
+/* Quote styling */
+.quote {
+  font-style: italic;
+  color: #b54c63;
+  background: #ffeaf0;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* Footer link */
+footer {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+#tribute-link {
+  color: #b54c63;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+#tribute-link:hover {
+  border-color: #b54c63;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #title {
+    font-size: 2rem;
+  }
+
+  #tribute-info {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+}
