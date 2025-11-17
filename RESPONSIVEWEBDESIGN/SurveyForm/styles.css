@@ -1,5 +1,4 @@
 * {
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,30 +14,27 @@ body {
     padding: 20px;
 }
 
-.form-container {
+form#survey-form {
     background: #fff;
-    padding: 40px 30px;
+    padding: 30px 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     width: 100%;
     max-width: 500px;
-    text-align: center;
 }
 
 #title {
+    text-align: center;
     font-size: 28px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #description {
+    text-align: center;
     font-size: 16px;
     color: #555;
-    margin-bottom: 30px;
-}
-
-form#survey-form {
-    text-align: left;
+    margin-bottom: 25px;
 }
 
 label {
@@ -72,18 +68,15 @@ textarea:focus {
     outline: none;
 }
 
-.radio-group,
-.checkbox-group {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 8px;
     transform: scale(1.1);
+}
+
+.radio-group,
+.checkbox-group {
+    margin-bottom: 10px;
 }
 
 textarea {
@@ -109,48 +102,8 @@ textarea {
 }
 
 @media (max-width: 600px) {
-    .form-container {
+    form#survey-form {
         padding: 20px;
     }
 }
-=======
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 16px;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .label {
-    border: 2px solid black;
-    width: 270px;
-    margin: 20px auto;
-    padding: 0 7px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin: -4px 0;
-    letter-spacing: 0.15px
-  }
-  
-  p {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    
-  }
-  
-  .divider {
-    border-bottom: 1px solid #888989;
-    margin: 2px 0;
-  }
-  
-  .bold {
-    font-weight: 800;
-  }
->>>>>>> 9a93fe25d89e3ca5f2615d26d8f4e26ec29e227c
+
