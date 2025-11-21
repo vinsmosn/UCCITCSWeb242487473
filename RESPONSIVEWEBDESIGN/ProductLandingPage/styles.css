@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ffffff; 
+    background-color: #121212; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #00388c;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#header-img {
+    width: 120px;
+    height: auto;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 100px 20px 50px; 
+    text-align: center;
+    background-color: #121212; 
+}
+
+#hero {
+    background-color: #1e1e1e; 
+    padding-top: 150px; 
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feature {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #333; 
+    border-radius: 5px;
+    background-color: #1e1e1e; 
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #333; 
+    border-radius: 5px;
+    background-color: #1e1e1e; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#email {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #555; 
+    border-radius: 4px;
+    background-color: #2a2a2a; 
+    color: #ffffff; 
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: #00388c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #00388c;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature {
+        width: 80%;
+    }
+    
+    .pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #email {
+        width: 250px;
+    }
+    
+    #header-img {
+        width: 80px;
+    }
+}
+
+.product-img {
+    width: 200px;
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .product-img {
+        width: 150px;
+        height: 225px; 
+    }
+}
