@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f0f2f5;
+    background: #f4f7fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,11 @@ body {
     padding: 20px;
 }
 
-form#survey-form {
+.form-container {
     background: #fff;
-    padding: 30px 40px;
+    padding: 40px 35px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 500px;
 }
@@ -26,23 +26,27 @@ form#survey-form {
 #title {
     text-align: center;
     font-size: 28px;
-    color: #333;
-    margin-bottom: 5px;
+    color: #222;
+    margin-bottom: 10px;
 }
 
 #description {
     text-align: center;
     font-size: 16px;
     color: #555;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+form#survey-form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
     margin-top: 15px;
     margin-bottom: 5px;
-    color: #333;
     font-weight: 500;
+    color: #333;
 }
 
 input[type="text"],
@@ -55,7 +59,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 15px;
     transition: border 0.3s;
 }
 
@@ -68,15 +72,18 @@ textarea:focus {
     outline: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 8px;
-    transform: scale(1.1);
-}
-
 .radio-group,
 .checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
     margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    transform: scale(1.1);
 }
 
 textarea {
@@ -85,7 +92,6 @@ textarea {
 }
 
 #submit {
-    width: 100%;
     background-color: #4CAF50;
     color: white;
     padding: 12px 0;
@@ -94,7 +100,7 @@ textarea {
     border-radius: 6px;
     font-size: 18px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
 #submit:hover {
@@ -102,8 +108,11 @@ textarea {
 }
 
 @media (max-width: 600px) {
-    form#survey-form {
-        padding: 20px;
+    .form-container {
+        padding: 25px;
+    }
+
+    #title {
+        font-size: 24px;
     }
 }
-
