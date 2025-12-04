@@ -1,0 +1,274 @@
+:root {
+    --primary-bg: #0d0d0d;
+    --secondary-bg: #1a1a1a;
+    --accent: #00d4ff;
+    --text-light: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --text-white: #ffffff;
+    --shadow: rgba(0,0,0,0.5);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Global styles */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--secondary-bg);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px var(--shadow);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(10px); /* Modern glass effect */
+  }
+  
+  #navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  #navbar a:hover, #navbar a:focus {
+    color: var(--accent);
+    outline: none;
+  }
+  
+  /* Welcome Section */
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, #1a1a2e 100%);
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #welcome-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--text-white);
+  }
+  
+  #welcome-section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: var(--text-muted);
+  }
+  
+  .cta-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--primary-bg);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-weight: 700;
+  }
+  
+  .btn:hover, .btn:focus {
+    background-color: #0099cc;
+    transform: translateY(-2px);
+    outline: none;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-white);
+    position: relative;
+  }
+  
+  section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    margin: 10px auto;
+  }
+  
+  /* About */
+  #about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #about li {
+    margin: 10px 0;
+    color: var(--text-muted);
+  }
+  
+  /* Projects */
+  /* 
+  OVERVIEW OF PROJECTS LOOK:
+  The projects section displays 4 project tiles in a responsive grid (auto-fit, min 300px width).
+  - Each tile: Dark gray background (#1a1a1a), rounded corners, subtle shadow, thin border.
+  - Hover: Tiles lift up (-5px), shadow deepens, border glows blue (#00d4ff).
+  - Content: Title in white, description in muted gray, tech/features in bold, two buttons (Live Demo & GitHub Repo).
+  - Buttons: Blue background, dark text, hover lift and color change.
+  - Grid: 4 columns on desktop, 2 on tablet, 1 on mobile for optimal viewing.
+  - Animation: Smooth transitions for all hover effects.
+  */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-tile {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #333;
+  }
+  
+  .project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--shadow);
+    border-color: var(--accent);
+  }
+  
+  .project-tile h3 {
+    margin-top: 0;
+    color: var(--text-white);
+  }
+  
+  .project-tile p {
+    margin: 10px 0;
+    color: var(--text-muted);
+  }
+  
+  .project-tile .btn {
+    margin-right: 10px;
+  }
+  
+  /* Contact */
+  #contact ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #contact li {
+    margin: 10px 0;
+  }
+  
+  #contact a {
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+  }
+  
+  #contact a:hover, #contact a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+  
+  /* Enhanced media queries for full responsiveness */
+  @media (max-width: 768px) {
+    #welcome-section h1 {
+      font-size: 2em;
+    }
+    
+    #navbar {
+      padding: 10px;
+    }
+    
+    #navbar a {
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+    
+    .project-tile {
+      padding: 15px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 0.9em;
+    }
+    
+    section {
+      padding: 60px 15px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #welcome-section h1 {
+      font-size: 1.8em;
+    }
+    
+    #navbar a {
+      margin: 0 5px;
+      font-size: 0.8em;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
